@@ -1,0 +1,10 @@
+server:
+  port: 8096
+
+cloud:
+  gateway:
+    routes:
+      - id: route1
+        url: http://localhost:8080
+        predicates:
+          - path=/Prod/**
