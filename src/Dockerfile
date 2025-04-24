@@ -7,5 +7,5 @@ RUN ./gradlew bootJar --no-daemon
 
 FROM eclipse-temurin:23
 EXPOSE 8080
-COPY --from=BUILD /build/libs/Gateway-0.0.1-SNAPSHOT.jar app.jar    
+COPY --from=BUILD /build/libs/Gateway-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar","app.jar"]
